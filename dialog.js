@@ -6,15 +6,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
 
 var $el = $('<div id="stopSOPA">STOP SOPA NOW</div>');
 
-$('body').append($el);
+$('body').prepend($el);
 
 $el.css({
     background: '#000',
-    position: 'absolute',
     top: 0,
     'z-index': '99999',
     width: '100%',
-    height: '200px;',
+    height: Math.floor($(window).height()*.75) + 'px',
     color: '#fff',
     'font-family': 'Helvetica, Arial',
     'font-size': '45px'
