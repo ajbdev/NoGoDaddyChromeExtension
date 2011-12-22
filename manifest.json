@@ -1,0 +1,13 @@
+{
+  "name": "NoGoDaddy",
+  "version": "1",
+  "description": "Block GoDaddy and supporters of SOPA",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background_page": "bg.html",
+  "permissions": [
+    "http://ec2-184-72-132-129.compute-1.amazonaws.com/",
+    "tabs"
+  ]
+}
