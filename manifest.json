@@ -1,6 +1,6 @@
 {
   "name": "NoSOPA",
-  "version": "1",
+  "version": "1.1",
   "description": "Be notified if you're visiting the website of a company that supports the dangerous SOPA legislation.",
   "background_page": "bg.html",
   "permissions": [
