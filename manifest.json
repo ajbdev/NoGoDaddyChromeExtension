@@ -1,7 +1,7 @@
 {
   "name": "NoSOPA",
   "version": "1",
-  "description": "Be notified if you're visiting the site of a SOPA supporter or GoDaddy(R) registered domain.",
+  "description": "Be notified if you're visiting the website of a company that supports the dangerous SOPA legislation.",
   "browser_action": {
     //"default_icon": "icon.png"
   },
