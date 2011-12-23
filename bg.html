@@ -7,11 +7,13 @@
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status=='loading') {
         var domain = tab.url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/)[2];
-        $.getJSON('http://ec2-184-72-132-129.compute-1.amazonaws.com/d/' + domain,function(isGoDaddy) {
-            if (isGoDaddy) { 
+        $.getJSON('http://ec2-184-72-132-129.compute-1.amazonaws.com/d/' + domain,function(r) {
+            if (r.isGoDaddy) { 
                 console.log(domain + ' is registered by GoDaddy');
-                chrome.tabs.executeScript(null,{ file: 'dialog.js' });
-            } else {
+                chrome.tabs.executeScript(null,{ file: 'godaddy.js' });
+            } else if (r.isSOPASupporter) {
+                console.log(domain + ' is a known SOPA supporter');
+                chrome.tabs.executeScript(null,{ file: 'sopa.js' });
             }
         });
     }
