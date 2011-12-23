@@ -1,7 +1,7 @@
 {
-  "name": "NoGoDaddy",
+  "name": "NoSOPA",
   "version": "1",
-  "description": "Block GoDaddy and supporters of SOPA",
+  "description": "Be notified if the site you're visiting is registered with SOPA-supporting GoDaddy&reg;",
   "browser_action": {
     "default_icon": "icon.png"
   },
