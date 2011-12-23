@@ -2,8 +2,6 @@
 <head>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-// GoDaddy is a registered trademark of GoDaddy Software, Inc.
-// This extension is not affiliated with nor approved by GoDaddy Software, Inc.
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status=='loading') {
         var domain = tab.url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/)[2];
