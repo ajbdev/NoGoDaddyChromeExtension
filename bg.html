@@ -4,7 +4,10 @@
 <script type="text/javascript">
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status=='loading') {
-        var domain = tab.url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/)[2];
+        var fullDomain = tab.url.match(/^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/)[6].split('.');
+        var domain = fullDomain[fullDomain.length-2] + '.' + fullDomain[fullDomain.length-1];
+        
+        
         $.getJSON('http://107.20.195.105/d/' + domain,function(r) {
             if (r.isGoDaddy) { 
                 //console.log(domain + ' is registered by GoDaddy(R)');
