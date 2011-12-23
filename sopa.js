@@ -6,7 +6,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
 
 if ($('#stopSOPA').length===0) {
 	
-	var $el = $("<div id='stopSOPA'><span style='font-weight:bold;'>SOPA Supporter!</span> This website's domain is a known supporter of the dangerous &lsquo;Stop Online Piracy Act.&rsquo;</div>");
+	var $el = $("<div id='stopSOPA'><span style='font-weight:bold;'>SOPA Supporter!</span> This company is a known supporter of the dangerous &lsquo;Stop Online Piracy Act.&rsquo;</div>");
 	$('body').prepend($el);
 
 	$el.css({
