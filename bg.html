@@ -1,24 +1,27 @@
 <html>
 <head>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="domains.js"></script>
 <script type="text/javascript">
+
+
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status=='loading') {
         var fullDomain = tab.url.match(/^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/)[6].split('.');
         var domain = fullDomain[fullDomain.length-2] + '.' + fullDomain[fullDomain.length-1];
-        
-        $.getJSON('http://107.20.195.105/d/' + domain,function(r) {
-            if (r.isGoDaddy) { 
-                //console.log(domain + ' is registered by GoDaddy(R)');
-                chrome.tabs.executeScript(null,{ file: 'godaddy.js' });
-            } else if (r.isSOPASupporter) {
-                //console.log(domain + ' is allegedly a SOPA supporter');
+        for (var i=0;i<domains.length;i++) {
+			if (domains[i].toLowerCase().trim()==domain.toLowerCase().trim()) {
                 chrome.tabs.executeScript(null,{ file: 'sopa.js' });
-            }
-        });
+			}
+		}
     }
 
 });
+
+
 </script>
 </head>
+<body>
+
+</body>
 </html>
