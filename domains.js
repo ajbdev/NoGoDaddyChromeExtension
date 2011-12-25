@@ -40,7 +40,6 @@ var domains = [
 	'cdas.com',
 	'cli.com',
 	'creativeamerica.org',
-	'dwt.com',
 	'deluxe.com',
 	'dga.org',
 	'elsevier.com',
