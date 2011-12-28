@@ -1,27 +1,16 @@
-<!DOCTYPE html><html><head>
-<script src="domains.js"></script>
-<script>
-
+<script type="text/javascript" src="domains.js"></script>
+<script type="text/javascript">
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    if (changeInfo.status != 'loading') {
+    if (changeInfo.status !== 'complete') {
         return;
     }
 
-    // Get the url parts [domain].[tld]
-    // Ignore any subdomains and paths.
-    // http(s)://a.b.c.d.e.f.com/g/h –> f.com
-    var host = window.location.host.split('.').splice(-2).join('.');
+    var urlRegex = /^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/;
+    var host = tab.url.match(urlRegex)[6].split('.').splice(-2).join('.');
 
-    // Not in array
-    // indexOf is in JS as over 1.6. https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/indexOf
-    if (domains.indexOf(host) === -1) {
-        return;
+    if (domains.indexOf(host) !== -1) {
+        chrome.tabs.executeScript(null, { file: 'sopa.js' });
     }
 
-    if (!document.getElementById('stopSOPA')) {
-        var content = "<div id='stopSOPA' style='background: #cc103f; top: 0; padding: 5px; text-align: center; z-index: 99999; font-size: 15px; line-height: 1.5; width: 100%; color: #fff; font-family: Helvetica, Arial;'><span style='font-weight: bold;'>SOPA Supporter!</span> This company is a known supporter of the dangerous &lsquo;Stop Online Piracy Act.&rsquo;</div>";
-        document.body.innerHTML = content + document.body.innerHTML;
-    }
 });
-
-</script></head><body></body></html>
+</script>
