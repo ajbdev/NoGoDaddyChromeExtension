@@ -19,6 +19,7 @@ var domains = [
 	'bmi.com',
 	'bmg.com',
 	'bctd.org',
+	'bsa.org',
 	'capitolnashville.com',
 	'cbs.com',
 	'cengage.com',
