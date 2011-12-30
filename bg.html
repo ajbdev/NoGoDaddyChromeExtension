@@ -1,26 +1,16 @@
-<html>
-<head>
 <script type="text/javascript" src="domains.js"></script>
 <script type="text/javascript">
-
-
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    if (changeInfo.status=='loading') {
-        var fullDomain = tab.url.match(/^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/)[6].split('.');
-        var domain = fullDomain[fullDomain.length-2] + '.' + fullDomain[fullDomain.length-1];
-        for (var i=0;i<domains.length;i++) {
-			if (domains[i].toLowerCase().trim()==domain.toLowerCase().trim()) {
-                chrome.tabs.executeScript(null,{ file: 'sopa.js' });
-			}
-		}
+    if (changeInfo.status !== 'complete') {
+        return;
+    }
+
+    var urlRegex = /^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/;
+    var host = tab.url.match(urlRegex)[6].split('.').splice(-2).join('.');
+
+    if (domains.indexOf(host) !== -1) {
+        chrome.tabs.executeScript(null, { file: 'sopa.js' });
     }
 
 });
-
-
 </script>
-</head>
-<body>
-
-</body>
-</html>
