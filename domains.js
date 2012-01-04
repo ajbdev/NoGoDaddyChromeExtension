@@ -238,6 +238,7 @@ var domains = [
 	'walmart.com',
 	'wmg.com',
 	'riaa.com',
+	'riaa.org',
 	'wwe.com',
 	'xerox.com',
 	'zippo.com',
