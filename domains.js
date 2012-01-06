@@ -46,6 +46,7 @@ var domains = [
 	'esteelauder.com',
 	'elcompanies.com',
 	'fop.net',
+	'godaddy.com',
 	'gospelmusic.org',
 	'graphicartistsguild.org',
 	'hachettebookgroup.com',
@@ -127,6 +128,11 @@ var domains = [
 	'warnermusicnashville.com',
 	'wkhealth.com',
 	'wordentertainment.com',
+	// GoDaddy
+	'godaddy.com',
+	'wildwestdomains.com',
+	'bluerazor.com',
+	'starfieldtech.com',
 	// Viacom
 	'xfire.com',
 	'addictinggames.com',
@@ -139,8 +145,8 @@ var domains = [
 	'harmonixmusic.com',
 	'spike.com',
 	'logotv.com',
-	'AfterEllen.com',
-	'AfterElton.com',
+	'afterellen.com',
+	'afterelton.com',
 	'365gay.com',
 	'parentsconnect.com',
 	'mtv.com',
@@ -192,8 +198,8 @@ var domains = [
 	'sky.de',
 	'sky.it',
 	'skytv.co.nz',
-	'AmericanIdol.com',
-	'AskMen.com',
+	'americanidol.com',
+	'askmen.com',
 	'gamespy.com',
 	'hulu.com',
 	'ign.com',
@@ -246,5 +252,5 @@ var domains = [
 	'findarticles.com',
 	'maxpreps.com',
 	'mp3.com',
-	'mysimon.com'
+	'mysimon.com',
 ];
