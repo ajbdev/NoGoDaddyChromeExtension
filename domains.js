@@ -221,5 +221,30 @@ var domains = [
 	'marketwatch.com',
 	'efinancialnews.com',
 	'harpercollins.com',
-	'foxmusic.com'
+	'foxmusic.com',
+	// IGN
+	'1up.com',
+	'ugo.com',
+	'teamxbox.com',
+	'gamestats.com',
+	'gamespy.com',
+	'fileplanet.com',
+	'askmen.com',
+	// CBS Interactive
+	'gamespot.com',
+	'cnet.com',
+	'metacritic.com',
+	'last.fm',
+	'cbsnews.com',
+	'techrepublic.com',
+	'clicker.com',
+	'tv.com',
+	'radio.com',
+	'search.com',
+	'chow.com',
+	'cbssports.com',
+	'findarticles.com',
+	'maxpreps.com',
+	'mp3.com',
+	'mysimon.com'
 ];
