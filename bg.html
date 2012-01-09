@@ -9,7 +9,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     var host = tab.url.match(urlRegex)[6].split('.').splice(-2).join('.');
 
     if (domains.indexOf(host) !== -1) {
-        chrome.tabs.executeScript(null, { file: 'sopa.js' });
+        chrome.tabs.executeScript(tabId, { file: 'sopa.js' });
     }
 
 });
