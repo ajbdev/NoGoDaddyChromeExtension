@@ -4,8 +4,6 @@ if (!document.getElementById('stopSOPA')) {
                 + "This company may be a supporter of the dangerous SOPA or PIPA legislation."
                 + "<div id='stopSOPAClose' style='color:#fff;cursor:pointer;font-weight:bold;float:right;width:20px'>&times;</div>"                
                 + "</div>";
-                  
-                  
     document.body.innerHTML = content + document.body.innerHTML;
     var close = document.getElementById('stopSOPAClose');
     
@@ -13,4 +11,6 @@ if (!document.getElementById('stopSOPA')) {
         document.getElementById('stopSOPA').style.display = 'none';
     
     });
+} else {
+    document.getElementById('stopSOPA').style.display = 'block';
 }
