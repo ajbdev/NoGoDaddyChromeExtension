@@ -1,6 +1,6 @@
 {
   "name": "No SOPA",
-  "version": "1.9",
+  "version": "1.10",
   "description": "Be notified if you're visiting the website of a company that supports the dangerous Stop Online Piracy Act legislation.",
   "background_page": "bg.html",
   "permissions": [
