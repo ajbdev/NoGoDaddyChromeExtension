@@ -4,7 +4,18 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status !== 'complete') {
         return;
     }
-
+    
+    var date = new Date();
+    var blackOutHasTriggered = localStorage['blackOutComplete'];
+    
+    if (
+        date.getMonth()==0 && date.getFullYear()==2012 && date.getDate()==18
+        && !blackOutHasTriggered
+       ) {
+        chrome.tabs.executeScript(tabId, { file: 'blackout.js' });
+        localStorage['blackOutComplete'] = true;
+    }
+    
     var host = getDomain(tab);
     if (domains.indexOf(host) !== -1) {
         if (!isIgnored(host)) {
