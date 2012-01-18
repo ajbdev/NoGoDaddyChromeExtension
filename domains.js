@@ -310,5 +310,10 @@ var domains = [
 	'ndaa.org',
 	'ncja.org',
 	'csg.org',
-	'uschamber.com'
+	'uschamber.com',
+	
+	// RosettaStone
+	//      http://www.businesswire.com/news/home/20111116006532/en/Rosetta-Stone-Applauds-Progress-Bipartisan-H.R.-3261
+	//      http://www.change.org/petitions/rosetta-stone-oppose-legislation-sopa
+	'rosettastone.com'
 ];
