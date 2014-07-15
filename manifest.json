@@ -1,11 +1,12 @@
 {
-  "name": "NoGoDaddy",
-  "version": "1",
-  "description": "Block GoDaddy and supporters of SOPA",
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
+  "name": "No SOPA",
+  "version": "1.11",
+  "description": "Be notified if you're visiting the website of a company that supports the dangerous Stop Online Piracy Act legislation.",
   "background_page": "bg.html",
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "Known Internet Blacklist Legislation Supporter! Click to toggle this popup."
+  },
   "permissions": [
     "http://*/",
     "https://*/",
